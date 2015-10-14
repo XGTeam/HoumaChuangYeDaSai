@@ -1,12 +1,12 @@
 {
-    "name": "graham-campbell/bootstrap-cms",
+    "name": "HouMa Competetion",
     "description": "Bootstrap CMS Is A PHP CMS Powered By Laravel 5 And Sentry",
-    "keywords": ["laravel", "framework", "sentry", "bootstrap", "cms", "bootstrap cms", "Bootstrap CMS", "Bootstrap-CMS", "blog", "login", "Graham Campbell", "GrahamCampbell"],
+    "keywords": ["Houma"],
     "license": "AGPL-3.0",
     "authors": [
         {
-            "name": "Graham Campbell",
-            "email": "graham@alt-three.com"
+            "name": "HHRPlus Company",
+            "email": "i@hhrplus.com"
         }
     ],
     "repositories": [
