@@ -18,6 +18,12 @@ elixir(function (mix) {
 
   mix.styles(['cms-main.css'], stylesPath + 'cms-main.css');
 
+  // Vendor styles
+  mix.styles([
+      'font-awesome/css/font-awesome.min.css',
+      'animate.css/animate.min.css'
+  ], stylesPath + 'vendor.min.css', bowerPath);
+
   // Vendor javascripts
   mix.scripts([
       'jquery/dist/jquery.min.js',
