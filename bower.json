@@ -1,0 +1,9 @@
+{
+  "name": "HouMaChuangYeDaSai",
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "font-awesome": "fontawesome#~4.4.0",
+    "jquery": "~1.11.3",
+    "jquery-timeago": "~1.4.3"
+  }
+}

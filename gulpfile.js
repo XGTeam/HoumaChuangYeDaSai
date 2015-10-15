@@ -4,6 +4,7 @@ var elixir = require('laravel-elixir');
 
 stylesPath = 'public/assets/styles/';
 scriptsPath = 'public/assets/scripts/';
+bowerPath = 'vendor/bower_components/';
 
 elixir.config.css.outputFolder = stylesPath;
 elixir.config.js.outputFolder = scriptsPath;
@@ -16,6 +17,13 @@ elixir(function (mix) {
   mix.styles(['bootstrap.min.css', 'agency.css'], stylesPath + 'bootstrap.agency.min.css');
 
   mix.styles(['cms-main.css'], stylesPath + 'cms-main.css');
+
+  // Vendor javascripts
+  mix.scripts([
+      'jquery/dist/jquery.min.js',
+      'jquery-timeago/jquery.timeago.js',
+      'bootstrap/dist/js/bootstrap.min.js'
+  ], scriptsPath + 'vendor.min.js', bowerPath);
 
   mix.scripts(['cms-timeago.js', 'cms-restfulizer.js', 'cms-carousel.js', 'cms-alerts.js'], scriptsPath + 'cms-main.js');
   mix.scripts(['cms-picker.js'], scriptsPath + 'cms-picker.js');
