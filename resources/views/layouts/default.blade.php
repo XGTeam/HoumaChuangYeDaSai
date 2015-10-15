@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -7,7 +7,7 @@
 @show</title>
 @include('partials.header')
 </head>
-<body>
+<body class="index" id="page-top">
 <div id="wrap">
 @navigation
 <div class="container">
