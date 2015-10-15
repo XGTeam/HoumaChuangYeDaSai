@@ -2,7 +2,7 @@
   "name": "HouMaChuangYeDaSai",
   "dependencies": {
     "animate.css": "~3.4.0",
-    "AnimatedHeader": "https://github.com/codrops/AnimatedHeader.git",
+    "AnimatedHeader": "https://github.com/zgs225/AnimatedHeader.git",
     "bootstrap": "~3.3.5",
     "classie": "~1.0.1",
     "font-awesome": "fontawesome#~4.4.0",
