@@ -28,10 +28,19 @@ elixir(function (mix) {
   mix.scripts([
       'jquery/dist/jquery.min.js',
       'jquery-timeago/jquery.timeago.js',
-      'bootstrap/dist/js/bootstrap.min.js'
+      'classie/classie.js',
+      'bootstrap/dist/js/bootstrap.min.js',
+      'jqBootstrapValidation/dist/jqBootstrapValidation-1.3.7.min.js',
+      'AnimatedHeader/js/cbpAnimatedHeader.min.js',
   ], scriptsPath + 'vendor.min.js', bowerPath);
 
-  mix.scripts(['cms-timeago.js', 'cms-restfulizer.js', 'cms-carousel.js', 'cms-alerts.js'], scriptsPath + 'cms-main.js');
+  mix.scripts(['cms-timeago.js',
+               'cms-restfulizer.js',
+               'cms-carousel.js',
+               'cms-alerts.js',
+               'agency.js',
+               'contact_me.js'
+  ], scriptsPath + 'cms-main.js');
   mix.scripts(['cms-picker.js'], scriptsPath + 'cms-picker.js');
   mix.scripts(['cms-comment-core.js', 'cms-comment-edit.js', 'cms-comment-delete.js', 'cms-comment-create.js', 'cms-comment-fetch.js', 'cms-comment-main.js'], scriptsPath + 'cms-comment.js');
 });
