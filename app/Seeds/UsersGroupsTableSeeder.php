@@ -31,7 +31,7 @@ class UsersGroupsTableSeeder extends Seeder
     {
         DB::table('users_groups')->truncate();
 
-        $this->matchUser('admin@dsmg.co.uk', 'Admins');
+        $this->matchUser('i@yuez.me', 'Admins');
         $this->matchUser('semiadmin@dsmg.co.uk', 'Moderators');
         $this->matchUser('semiadmin@dsmg.co.uk', 'Bloggers');
         $this->matchUser('semiadmin@dsmg.co.uk', 'Editors');

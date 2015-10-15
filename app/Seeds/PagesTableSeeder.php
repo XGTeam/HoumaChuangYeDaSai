@@ -34,8 +34,8 @@ class PagesTableSeeder extends Seeder
         DB::table('pages')->truncate();
 
         $home = [
-            'title'      => 'Welcome',
-            'nav_title'  => 'Home',
+            'title'      => '首页',
+            'nav_title'  => '首页',
             'slug'       => 'home',
             'body'       => $this->getContent('home'),
             'show_title' => false,
@@ -47,22 +47,22 @@ class PagesTableSeeder extends Seeder
 
         DB::table('pages')->insert($home);
 
-        $contact = [
-            'title'      => 'Contact Us',
-            'nav_title'  => 'Contact',
-            'slug'       => 'contact',
-            'body'       => $this->getContent('contact'),
+        $enroll = [
+            'title'      => '报名',
+            'nav_title'  => '报名',
+            'slug'       => 'enroll',
+            'body'       => $this->getContent('enroll'),
             'user_id'    => 1,
             'icon'       => 'envelope',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];
 
-        DB::table('pages')->insert($contact);
+        DB::table('pages')->insert($enroll);
 
         $about = [
-            'title'      => 'About Us',
-            'nav_title'  => 'About',
+            'title'      => '关于',
+            'nav_title'  => '关于',
             'slug'       => 'about',
             'body'       => $this->getContent('about'),
             'user_id'    => 1,

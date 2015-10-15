@@ -35,8 +35,8 @@ class UsersTableSeeder extends Seeder
         $user = [
             'first_name'   => 'CMS',
             'last_name'    => 'Admin',
-            'email'        => 'admin@dsmg.co.uk',
-            'password'     => 'password',
+            'email'        => 'i@yuez.me',
+            'password'     => 'public',
             'activated'    => 1,
             'activated_at' => Carbon::now(),
         ];

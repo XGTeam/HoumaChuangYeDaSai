@@ -51,3 +51,6 @@ if (Config::get('cms.blogging')) {
 if (Config::get('cms.events')) {
     $router->resource('events', 'EventController');
 }
+
+// 报名
+$router->resource('enrollments', 'EnrollmentController');

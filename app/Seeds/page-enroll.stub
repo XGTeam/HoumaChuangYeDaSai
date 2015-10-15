@@ -1,0 +1,2 @@
+<p class="lead">请认真填写报名资料。</p>
+<div class="well"><?php echo View::make("enrollments.form"); ?></div>

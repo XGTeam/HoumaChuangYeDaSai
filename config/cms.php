@@ -22,7 +22,7 @@ return [
     |
     */
 
-    'description' => 'Bootstrap CMS is a PHP CMS powered by Laravel 5.',
+    'description' => '侯马创业大赛官网',
 
     /*
     |--------------------------------------------------------------------------
@@ -35,7 +35,7 @@ return [
     |
     */
 
-    'author' => 'Graham Campbell',
+    'author' => 'Team HHRPlus',
 
     /*
     |--------------------------------------------------------------------------
