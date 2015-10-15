@@ -2,9 +2,9 @@
 <meta name="description" content="{{ Config::get('cms.description') }}">
 <meta name="author" content="{{ Config::get('cms.author') }}">
 
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/bootstrap.'.Config::get('theme.name', 'default').'.min.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/vendor.min.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/cms-main.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/bootstrap.'.Config::get('theme.name', 'default').'.min.css') }}">
 
 @section('css')
 @show

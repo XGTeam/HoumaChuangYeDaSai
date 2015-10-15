@@ -1,33 +1,13 @@
-<div class="hidden-xs">
-    <div class="jumbotron">
-        <div class="hidden-sm">
-            <h1><?php echo Config::get("app.name"); ?></h1>
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="intro-text">
+            <div class="intro-lead-in">欢迎参加!</div>
+            <div class="intro-heading">山西省创业创新大赛</div>
+            <a href="#services" class="page-scroll btn btn-xl">&nbsp;&nbsp;立刻报名&nbsp;&nbsp;</a>
         </div>
-        <div class="visible-sm">
-            <h1><?php echo Config::get("app.name"); ?></h1>
-        </div>
-        <p class="lead">Powered by Laravel 5 with Bootstrap CMS and Sentry</p>
-        <?php if (Config::get('credentials.regallowed')) { ?>
-            <a class="btn btn-lg btn-success" href="<?php echo URL::route("account.register"); ?>">Sign Up Today</a>
-        <?php } else { ?>
-            <a class="btn btn-lg btn-success" href="<?php echo URL::route("pages.show", array("pages" => "about")); ?>">More Information</a>
-        <?php } ?>
     </div>
-</div>
-
-<div class="visible-xs">
-    <div class="jumbotron">
-        <h1><?php echo Config::get("app.name"); ?></h1>
-        <p class="lead">Powered by Laravel 5 with Bootstrap CMS</p>
-        <?php if (Config::get('credentials.regallowed')) { ?>
-            <a class="btn btn-lg btn-success" href="<?php echo URL::route("account.register"); ?>">Sign Up Today</a>
-        <?php } else { ?>
-            <a class="btn btn-lg btn-success" href="<?php echo URL::route("pages.show", array("pages" => "about")); ?>">More Information</a>
-        <?php } ?>
-    </div>
-</div>
-
-<hr>
+</header>
 
 <div class="row">
 

@@ -4,6 +4,7 @@ var elixir = require('laravel-elixir');
 
 stylesPath = 'public/assets/styles/';
 scriptsPath = 'public/assets/scripts/';
+imagesPath = 'public/assets/images/';
 bowerPath = 'vendor/bower_components/';
 
 elixir.config.css.outputFolder = stylesPath;
@@ -12,6 +13,7 @@ elixir.config.sourcemaps = false;
 
 elixir(function (mix) {
   mix.copy('resources/assets/css/bootstrap.*.min.css', stylesPath);
+  mix.copy('resources/assets/images/', imagesPath);
   mix.styles(['bootstrap.min.css'], stylesPath + 'bootstrap.default.min.css');
   mix.styles(['bootstrap.min.css', 'bootstrap-theme.min.css'], stylesPath + 'bootstrap.legacy.min.css');
   mix.styles(['bootstrap.min.css', 'agency.css'], stylesPath + 'bootstrap.agency.min.css');
@@ -28,9 +30,10 @@ elixir(function (mix) {
   mix.scripts([
       'jquery/dist/jquery.min.js',
       'jquery-timeago/jquery.timeago.js',
-      'classie/classie.js',
       'bootstrap/dist/js/bootstrap.min.js',
       'jqBootstrapValidation/dist/jqBootstrapValidation-1.3.7.min.js',
+      'classie/classie.js',
+      'jquery.easing/js/jquery.easing.min.js',
       'AnimatedHeader/js/cbpAnimatedHeader.min.js',
   ], scriptsPath + 'vendor.min.js', bowerPath);
 
@@ -38,8 +41,8 @@ elixir(function (mix) {
                'cms-restfulizer.js',
                'cms-carousel.js',
                'cms-alerts.js',
+               'contact_me.js',
                'agency.js',
-               'contact_me.js'
   ], scriptsPath + 'cms-main.js');
   mix.scripts(['cms-picker.js'], scriptsPath + 'cms-picker.js');
   mix.scripts(['cms-comment-core.js', 'cms-comment-edit.js', 'cms-comment-delete.js', 'cms-comment-create.js', 'cms-comment-fetch.js', 'cms-comment-main.js'], scriptsPath + 'cms-comment.js');

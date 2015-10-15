@@ -39,7 +39,6 @@ class PagesTableSeeder extends Seeder
             'slug'       => 'home',
             'body'       => $this->getContent('home'),
             'show_title' => false,
-            'icon'       => 'home',
             'user_id'    => 1,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
@@ -53,7 +52,6 @@ class PagesTableSeeder extends Seeder
             'slug'       => 'enroll',
             'body'       => $this->getContent('enroll'),
             'user_id'    => 1,
-            'icon'       => 'envelope',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];
@@ -66,7 +64,6 @@ class PagesTableSeeder extends Seeder
             'slug'       => 'about',
             'body'       => $this->getContent('about'),
             'user_id'    => 1,
-            'icon'       => 'info-circle',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];

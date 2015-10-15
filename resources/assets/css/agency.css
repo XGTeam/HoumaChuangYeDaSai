@@ -6,7 +6,7 @@
 
 body {
     overflow-x: hidden;
-    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
 }
 
 .text-muted {
@@ -265,7 +265,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(../img/header-bg.jpg);
+    background-image: url(../images/header-bg.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;

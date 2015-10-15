@@ -8,9 +8,7 @@
 @include('partials.header')
 </head>
 <body class="index" id="page-top">
-<div id="wrap">
 @navigation
-<div class="container">
 @section('top')
 @show
 @include('partials.notifications')
