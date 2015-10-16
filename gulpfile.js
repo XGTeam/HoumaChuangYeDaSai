@@ -31,10 +31,9 @@ elixir(function (mix) {
       'jquery/dist/jquery.min.js',
       'jquery-timeago/jquery.timeago.js',
       'bootstrap/dist/js/bootstrap.min.js',
-      'jqBootstrapValidation/dist/jqBootstrapValidation-1.3.7.min.js',
       'classie/classie.js',
       'jquery.easing/js/jquery.easing.min.js',
-      'AnimatedHeader/js/cbpAnimatedHeader.min.js',
+      'AnimatedHeader/js/cbpAnimatedHeader.min.js'
   ], scriptsPath + 'vendor.min.js', bowerPath);
 
   mix.scripts(['cms-timeago.js',

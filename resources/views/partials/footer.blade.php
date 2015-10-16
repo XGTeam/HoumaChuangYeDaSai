@@ -1,26 +1,32 @@
 </div></div>
 
-<div id="footer">
-    <div class="container hidden-xs">
+<footer>
+    <div class="container">
         <div class="row">
-            <div class="col-xs-8">
-                <p class="text-muted credit">
-                    &copy; {{ Config::get('cms.author') }}</a> 2015. All rights reserved.
-                </p>
+            <div class="col-md-4">
+                <span class="copyright">Copyright &copy; {{ Config::get('cms.author') }}</span>
             </div>
-            <div class="col-xs-4">
-                <p class="text-muted credit pull-right">
-                    Generated in {{ round((microtime(1) - LARAVEL_START), 4) }} sec.
-                </p>
+            <div class="col-md-4">
+                <ul class="list-inline social-buttons">
+                    <li><a href="#"><i class="fa fa-weixin"></i></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-weibo"></i></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-envelope"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline quicklinks">
+                    <li><a href="#">隐私策略</a>
+                    </li>
+                    <li><a href="#">使用条款</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-    <div class="container visible-xs">
-        <p class="text-muted credit">
-            &copy; {{ Config::get('cms.author') }}</a> 2015. All rights reserved.
-        </p>
-    </div>
-</div>
+</footer>
 
 <script type="text/javascript" src="{{ asset('assets/scripts/vendor.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/scripts/cms-main.js') }}"></script>
