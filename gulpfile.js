@@ -31,6 +31,7 @@ elixir(function (mix) {
       'jquery/dist/jquery.min.js',
       'jquery-timeago/jquery.timeago.js',
       'bootstrap/dist/js/bootstrap.min.js',
+      'jqBootstrapValidation/dist/jqBootstrapValidation-1.3.7.min.js',
       'classie/classie.js',
       'jquery.easing/js/jquery.easing.min.js',
       'AnimatedHeader/js/cbpAnimatedHeader.min.js'
@@ -41,6 +42,7 @@ elixir(function (mix) {
                'cms-carousel.js',
                'cms-alerts.js',
                'agency.js',
+               'enroll.js',
   ], scriptsPath + 'cms-main.js');
   mix.scripts(['cms-picker.js'], scriptsPath + 'cms-picker.js');
   mix.scripts(['cms-comment-core.js', 'cms-comment-edit.js', 'cms-comment-delete.js', 'cms-comment-create.js', 'cms-comment-fetch.js', 'cms-comment-main.js'], scriptsPath + 'cms-comment.js');
