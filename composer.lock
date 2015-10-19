@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e598963611e3807b29469095fdd23ad1",
-    "content-hash": "c000a2cee4d153177330c09d4f12a868",
+    "hash": "c07e6a44a29b6fe84148997d725a98a9",
+    "content-hash": "955bb4c4d600836c2ef4600975dc783b",
     "packages": [
         {
             "name": "cartalyst/sentry",
@@ -602,86 +602,6 @@
             "time": "2015-10-06 16:45:46"
         },
         {
-            "name": "graham-campbell/credentials",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/BootstrapCMS/Credentials.git",
-                "reference": "54f0a347a03e1cd32e9c38ee832a8e564144f8af"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/BootstrapCMS/Credentials/zipball/54f0a347a03e1cd32e9c38ee832a8e564144f8af",
-                "reference": "54f0a347a03e1cd32e9c38ee832a8e564144f8af",
-                "shasum": ""
-            },
-            "require": {
-                "cartalyst/sentry": "~3.0",
-                "graham-campbell/binput": "~3.0",
-                "graham-campbell/throttle": "~4.0",
-                "illuminate/console": "5.1.*",
-                "illuminate/contracts": "5.1.*",
-                "illuminate/database": "5.1.*",
-                "illuminate/events": "5.1.*",
-                "illuminate/http": "5.1.*",
-                "illuminate/mail": "5.1.*",
-                "illuminate/pagination": "5.1.*",
-                "illuminate/routing": "5.1.*",
-                "illuminate/support": "5.1.*",
-                "illuminate/validation": "5.1.*",
-                "illuminate/view": "5.1.*",
-                "mccool/laravel-auto-presenter": "~3.0",
-                "php": ">=5.5.9",
-                "psr/log": "~1.0"
-            },
-            "require-dev": {
-                "graham-campbell/testbench": "~3.0",
-                "phpunit/phpunit": "^4.7.6"
-            },
-            "suggest": {
-                "graham-campbell/navigation": "Easily add a navigation bar."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GrahamCampbell\\Credentials\\": "src/"
-                },
-                "files": [
-                    "src/helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Graham Campbell",
-                    "email": "graham@alt-three.com"
-                }
-            ],
-            "description": "Credentials Is A Cool Way To Authenticate In Laravel 5",
-            "keywords": [
-                "Graham Campbell",
-                "GrahamCampbell",
-                "Laravel Credentials",
-                "Laravel-Credentials",
-                "Users",
-                "credentials",
-                "framework",
-                "laravel",
-                "login",
-                "permissions",
-                "sentry"
-            ],
-            "time": "2015-10-01 07:44:22"
-        },
-        {
             "name": "graham-campbell/exceptions",
             "version": "v4.0.0",
             "source": {
@@ -1261,16 +1181,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "5.1.x-dev",
+            "version": "v5.1.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "dd5ec4ae1a849a86a81b0472a2d22cd1fdc5023d"
+                "reference": "435af155ed15a6b1d03a0d0a46ae4c347d96b0d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/dd5ec4ae1a849a86a81b0472a2d22cd1fdc5023d",
-                "reference": "dd5ec4ae1a849a86a81b0472a2d22cd1fdc5023d",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/435af155ed15a6b1d03a0d0a46ae4c347d96b0d7",
+                "reference": "435af155ed15a6b1d03a0d0a46ae4c347d96b0d7",
                 "shasum": ""
             },
             "require": {
@@ -1284,6 +1204,7 @@
                 "monolog/monolog": "~1.11",
                 "mtdowling/cron-expression": "~1.0",
                 "nesbot/carbon": "~1.19",
+                "paragonie/random_compat": "^1.0.4",
                 "php": ">=5.5.9",
                 "psy/psysh": "~0.5.1",
                 "swiftmailer/swiftmailer": "~5.1",
@@ -1385,7 +1306,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-08-09 16:57:44"
+            "time": "2015-10-14 15:49:40"
         },
         {
             "name": "league/commonmark",
@@ -1595,16 +1516,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.17.1",
+            "version": "1.17.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "0524c87587ab85bc4c2d6f5b41253ccb930a5422"
+                "reference": "bee7f0dc9c3e0b69a6039697533dca1e845c8c24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/0524c87587ab85bc4c2d6f5b41253ccb930a5422",
-                "reference": "0524c87587ab85bc4c2d6f5b41253ccb930a5422",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bee7f0dc9c3e0b69a6039697533dca1e845c8c24",
+                "reference": "bee7f0dc9c3e0b69a6039697533dca1e845c8c24",
                 "shasum": ""
             },
             "require": {
@@ -1618,10 +1539,11 @@
                 "aws/aws-sdk-php": "^2.4.9",
                 "doctrine/couchdb": "~1.0@dev",
                 "graylog2/gelf-php": "~1.0",
+                "jakub-onderka/php-parallel-lint": "0.9",
                 "php-console/php-console": "^3.1.3",
                 "phpunit/phpunit": "~4.5",
                 "phpunit/phpunit-mock-objects": "2.3.0",
-                "raven/raven": "~0.11",
+                "raven/raven": "^0.13",
                 "ruflin/elastica": ">=0.90 <3.0",
                 "swiftmailer/swiftmailer": "~5.3",
                 "videlalvaro/php-amqplib": "~2.4"
@@ -1667,7 +1589,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-08-31 09:17:37"
+            "time": "2015-10-14 12:51:02"
         },
         {
             "name": "mrclay/minify",
@@ -1849,6 +1771,51 @@
                 "php"
             ],
             "time": "2015-09-19 14:15:08"
+        },
+        {
+            "name": "paragonie/random_compat",
+            "version": "1.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paragonie/random_compat.git",
+                "reference": "7fe2420f8ad46aa08d5b317c92a148611d366d88"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/7fe2420f8ad46aa08d5b317c92a148611d366d88",
+                "reference": "7fe2420f8ad46aa08d5b317c92a148611d366d88",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "suggest": {
+                "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/random.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paragon Initiative Enterprises",
+                    "email": "security@paragonie.com",
+                    "homepage": "https://paragonie.com"
+                }
+            ],
+            "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
+            "keywords": [
+                "csprng",
+                "pseudorandom",
+                "random"
+            ],
+            "time": "2015-10-18 21:39:26"
         },
         {
             "name": "psr/log",
@@ -2756,6 +2723,98 @@
                 "environment"
             ],
             "time": "2015-05-30 15:59:26"
+        },
+        {
+            "name": "zgs225/credentials",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zgs225/Credentials.git",
+                "reference": "7ae3239e3672ad786bf788ea2e6e284d7db3642f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zgs225/Credentials/zipball/7ae3239e3672ad786bf788ea2e6e284d7db3642f",
+                "reference": "7ae3239e3672ad786bf788ea2e6e284d7db3642f",
+                "shasum": ""
+            },
+            "require": {
+                "cartalyst/sentry": "~3.0",
+                "graham-campbell/binput": "~3.0",
+                "graham-campbell/throttle": "~4.0",
+                "illuminate/console": "5.1.*",
+                "illuminate/contracts": "5.1.*",
+                "illuminate/database": "5.1.*",
+                "illuminate/events": "5.1.*",
+                "illuminate/http": "5.1.*",
+                "illuminate/mail": "5.1.*",
+                "illuminate/pagination": "5.1.*",
+                "illuminate/routing": "5.1.*",
+                "illuminate/support": "5.1.*",
+                "illuminate/validation": "5.1.*",
+                "illuminate/view": "5.1.*",
+                "mccool/laravel-auto-presenter": "~3.0",
+                "php": ">=5.5.9",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "graham-campbell/testbench": "~3.0",
+                "phpunit/phpunit": "^4.7.6"
+            },
+            "suggest": {
+                "graham-campbell/navigation": "Easily add a navigation bar."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GrahamCampbell\\Credentials\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "GrahamCampbell\\Tests\\Credentials\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@alt-three.com"
+                },
+                {
+                    "name": "Yuez",
+                    "email": "i@yuez.me"
+                }
+            ],
+            "description": "Credentials Is A Cool Way To Authenticate In Laravel 5",
+            "keywords": [
+                "Credentials",
+                "Graham Campbell",
+                "GrahamCampbell",
+                "Laravel Credentials",
+                "Laravel-Credentials",
+                "credentials",
+                "framework",
+                "laravel",
+                "login",
+                "permissions",
+                "sentry",
+                "users"
+            ],
+            "support": {
+                "source": "https://github.com/zgs225/Credentials/tree/master"
+            },
+            "time": "2015-10-19 09:27:48"
         }
     ],
     "packages-dev": [
@@ -3736,16 +3795,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.12",
+            "version": "4.8.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "00194eb95989190a73198390ceca081ad3441a7f"
+                "reference": "b4900675926860bef091644849305399b986efa2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/00194eb95989190a73198390ceca081ad3441a7f",
-                "reference": "00194eb95989190a73198390ceca081ad3441a7f",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b4900675926860bef091644849305399b986efa2",
+                "reference": "b4900675926860bef091644849305399b986efa2",
                 "shasum": ""
             },
             "require": {
@@ -3804,7 +3863,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-10-12 03:36:47"
+            "time": "2015-10-17 15:03:30"
         },
         {
             "name": "phpunit/phpunit-mock-objects",

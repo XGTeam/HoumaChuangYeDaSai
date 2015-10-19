@@ -12,6 +12,10 @@
     "repositories": [
         {
             "type": "vcs",
+            "url": "https://github.com/zgs225/Credentials.git"
+        },
+        {
+            "type": "vcs",
             "url": "https://github.com/BootstrapCMS/Sentry"
         }
     ],
@@ -22,7 +26,7 @@
         "graham-campbell/binput": "~3.0",
         "graham-campbell/contact": "~1.0",
         "graham-campbell/core": "~4.0",
-        "graham-campbell/credentials": "~1.0",
+        "zgs225/credentials": "~1.0",
         "graham-campbell/exceptions": "~4.0",
         "graham-campbell/htmlmin": "~4.0",
         "graham-campbell/logviewer": "~1.0",
