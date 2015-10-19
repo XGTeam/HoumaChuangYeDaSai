@@ -40,7 +40,6 @@ elixir(function (mix) {
                'cms-restfulizer.js',
                'cms-carousel.js',
                'cms-alerts.js',
-               'contact_me.js',
                'agency.js',
   ], scriptsPath + 'cms-main.js');
   mix.scripts(['cms-picker.js'], scriptsPath + 'cms-picker.js');

@@ -45,13 +45,6 @@
                         登录
                         </a>
                     </li>
-                    @if (Config::get('credentials.regallowed'))
-                        <li {!! (Request::is('account/register') ? 'class="active"' : '') !!}>
-                            <a href="{!! URL::route('account.register') !!}">
-                            注册
-                            </a>
-                        </li>
-                    @endif
                 @endif
         </ul>
         </div>
