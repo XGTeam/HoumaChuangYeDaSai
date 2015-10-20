@@ -40,6 +40,11 @@
                         </ul>
                     </li>
                 @else
+                    <li {!! (Request::is('account/register') ? 'class="active"' : '') !!}>
+                        <a href="{!! URL::route('account.register') !!}">
+                        报名
+                        </a>
+                    </li>
                     <li {!! (Request::is('account/login') ? 'class="active"' : '') !!}>
                         <a href="{!! URL::route('account.login') !!}">
                         登录

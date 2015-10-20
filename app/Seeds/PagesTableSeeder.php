@@ -46,18 +46,6 @@ class PagesTableSeeder extends Seeder
 
         DB::table('pages')->insert($home);
 
-        $enroll = [
-            'title'      => '报名',
-            'nav_title'  => '报名',
-            'slug'       => 'enroll',
-            'body'       => $this->getContent('enroll'),
-            'user_id'    => 1,
-            'created_at' => Carbon::now(),
-            'updated_at' => Carbon::now(),
-        ];
-
-        DB::table('pages')->insert($enroll);
-
         $faq = [
             'title'      => 'FAQ',
             'nav_title'  => 'FAQ',
