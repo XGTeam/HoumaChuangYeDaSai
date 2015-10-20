@@ -34,7 +34,7 @@
                             <li class="divider"></li>
                             <li>
                                 <a href="{!! URL::route('account.logout') !!}">
-                                    <i class="fa fa-power-off fa-fw"></i> 注销
+                                    <i class="fa fa-power-off fa-fw"></i> 退出登录
                                 </a>
                             </li>
                         </ul>
