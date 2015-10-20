@@ -473,7 +473,7 @@
     </div>
 </aside>
 
-<!-- Contact Section -->
+<!-- Enrollment Section -->
 <section id="enroll">
     <div class="container">
         <div class="row">
@@ -490,31 +490,43 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="姓" name="last_name" required data-validation-required-message="请填写你的姓氏">
-                                <p class="help-block text-danger"></p>
+                            <div class="form-group control-group">
+                                <div class="controls">
+                                    <input type="text" class="form-control" placeholder="姓" name="last_name" required data-validation-required-message="请填写你的姓氏">
+                                    <p class="help-block text-danger"></p>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="邮箱" id="email" name="email" required data-validation-required-message="请填写你的邮箱">
-                                <p class="help-block text-danger"></p>
+                            <div class="form-group control-group">
+                                <div class="controls">
+                                    <input type="text" class="form-control" placeholder="名" name="first_name" id="first_name" required data-validation-required-message="请填写你的名字">
+                                    <p class="help-block text-danger"></p>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="密码" id="password" name="password" required data-validation-required-message="请填写密码">
-                                <p class="help-block text-danger"></p>
+                            <div class="form-group control-group">
+                                <div class="controls">
+                                    <input type="tel" class="form-control" placeholder="手机号码" id="phone" name="phone" required data-validation-required-message="请填写你的手机号码">
+                                    <p class="help-block text-danger"></p>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="名" name="first_name" id="first_name" required data-validation-required-message="请填写你的名字">
-                                <p class="help-block text-danger"></p>
+                            <div class="form-group control-group">
+                                <div class="controls">
+                                    <input type="email" class="form-control" placeholder="邮箱" id="email" name="email" required data-validation-required-message="请填写你的邮箱">
+                                    <p class="help-block text-danger"></p>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input type="tel" class="form-control" placeholder="手机号码" id="phone" name="phone" required data-validation-required-message="请填写你的手机号码">
-                                <p class="help-block text-danger"></p>
+                            <div class="form-group control-group">
+                                <div class="controls">
+                                    <input type="password" class="form-control" placeholder="密码" id="password" name="password" required data-validation-required-message="请填写密码">
+                                    <p class="help-block text-danger"></p>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="确认密码" id="password_confirmation" name="password_confirmation" required data-validation-required-message="请确认密码">
-                                <p class="help-block text-danger"></p>
+                            <div class="form-group control-group">
+                                <div class="controls">
+                                    <input type="password" class="form-control" placeholder="确认密码" id="password_confirmation" name="password_confirmation" required data-validation-required-message="请确认密码">
+                                    <p class="help-block text-danger"></p>
+                                </div>
                             </div>
                         </div>
                         <div class="clearfix"></div>
