@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c07e6a44a29b6fe84148997d725a98a9",
-    "content-hash": "955bb4c4d600836c2ef4600975dc783b",
+    "hash": "5e371eb5acc3c7cc9801a10d798cec67",
+    "content-hash": "aed6080315e4c3ec928d3aefee07ac5b",
     "packages": [
         {
             "name": "cartalyst/sentry",
@@ -2726,16 +2726,16 @@
         },
         {
             "name": "zgs225/credentials",
-            "version": "dev-master",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zgs225/Credentials.git",
-                "reference": "7ae3239e3672ad786bf788ea2e6e284d7db3642f"
+                "reference": "40fee474ae1ec0e28dbcb1eb33375cd3ff4d3b27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zgs225/Credentials/zipball/7ae3239e3672ad786bf788ea2e6e284d7db3642f",
-                "reference": "7ae3239e3672ad786bf788ea2e6e284d7db3642f",
+                "url": "https://api.github.com/repos/zgs225/Credentials/zipball/40fee474ae1ec0e28dbcb1eb33375cd3ff4d3b27",
+                "reference": "40fee474ae1ec0e28dbcb1eb33375cd3ff4d3b27",
                 "shasum": ""
             },
             "require": {
@@ -2812,9 +2812,9 @@
                 "users"
             ],
             "support": {
-                "source": "https://github.com/zgs225/Credentials/tree/master"
+                "source": "https://github.com/zgs225/Credentials/tree/v1.1.2"
             },
-            "time": "2015-10-19 09:27:48"
+            "time": "2015-10-20 07:52:00"
         }
     ],
     "packages-dev": [
