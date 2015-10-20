@@ -230,6 +230,18 @@ fieldset[disabled] .btn-xl.active {
     background-color: #fed136;
 }
 
+.navbar-default .dropdown-menu {
+  background-color: #e7e7e7;
+}
+
+.navbar-default .dropdown-menu li a {
+  color: #555;
+}
+
+.dropdown-menu .divider {
+  background-color: #333;
+}
+
 @media(min-width:768px) {
     .navbar-default {
         padding: 25px 0;
