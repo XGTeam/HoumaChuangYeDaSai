@@ -226,7 +226,7 @@ class NavigationSubscriber
   {
     if (!$this->credentials->hasAccess('admin')) {
       $this->navigation->addToBar(
-        ['title' => '比赛资料', 'slug' => 'account/history', 'icon' => 'file-text-o']
+        ['title' => '比赛资料', 'slug' => 'account/enrollment', 'icon' => 'file-text-o']
       );
     }
 
