@@ -8,8 +8,9 @@ use GrahamCampbell\BootstrapCMS\Models\Relations\HasManyMembersTrait;
 use GrahamCampbell\BootstrapCMS\Models\Relations\HasManyAttachmentsTrait;
 use Codesleeve\Stapler\ORM\StaplerableInterface;
 use Codesleeve\Stapler\ORM\EloquentTrait;
+use McCool\LaravelAutoPresenter\HasPresenter;
 
-class Project extends AbstractModel implements StaplerableInterface
+class Project extends AbstractModel implements StaplerableInterface, HasPresenter
 {
   use BelongsToUserTrait, HasManyMembersTrait, HasManyAttachmentsTrait, EloquentTrait;
 
@@ -28,5 +29,10 @@ class Project extends AbstractModel implements StaplerableInterface
   {
     $this->deleteMembers();
     $this->deleteAttachments();
+  }
+
+  public function getPresenterClass()
+  {
+    return 'GrahamCampbell\BootstrapCMS\Presenters\ProjectPresenter';
   }
 }

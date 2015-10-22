@@ -52,5 +52,5 @@ if (Config::get('cms.events')) {
     $router->resource('events', 'EventController');
 }
 
-// 报名
-$router->resource('enrollments', 'EnrollmentController');
+// 用户参赛资料
+$router->get('account/project', ['as' => 'account.project', 'uses' => 'ProjectController@getLoginUserProject']);

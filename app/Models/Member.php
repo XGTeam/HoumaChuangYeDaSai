@@ -8,4 +8,8 @@ use GrahamCampbell\BootstrapCMS\Models\Relations\BelongsToProjectTrait;
 class Member extends AbstractModel
 {
   use BelongsToProjectTrait;
+
+  protected $fillable = [
+    'name', 'age', 'sex', 'title', 'diploma', 'academy', 'description'
+  ];
 }
