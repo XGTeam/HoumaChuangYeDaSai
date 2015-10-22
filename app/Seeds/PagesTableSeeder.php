@@ -42,6 +42,7 @@ class PagesTableSeeder extends Seeder
             'user_id'    => 1,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
+            'js' => '<script src="/assets/scripts/cbpAnimatedHeader.min.js"></script>'
         ];
 
         DB::table('pages')->insert($home);

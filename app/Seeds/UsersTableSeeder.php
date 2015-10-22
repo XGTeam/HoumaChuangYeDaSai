@@ -83,10 +83,10 @@ class UsersTableSeeder extends Seeder
         Credentials::getUserProvider()->create($user);
 
         $user = [
-            'first_name'   => 'CMS',
-            'last_name'    => 'User',
-            'email'        => 'user@dsmg.co.uk',
-            'password'     => 'password',
+            'first_name'   => '三峰',
+            'last_name'    => '张',
+            'email'        => 'he@he.he',
+            'password'     => 'public',
             'activated'    => 1,
             'activated_at' => Carbon::now(),
         ];

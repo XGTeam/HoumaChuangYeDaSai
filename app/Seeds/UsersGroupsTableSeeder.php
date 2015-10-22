@@ -38,7 +38,7 @@ class UsersGroupsTableSeeder extends Seeder
         $this->matchUser('moderator@dsmg.co.uk', 'Moderators');
         $this->matchUser('blogger@dsmg.co.uk', 'Bloggers');
         $this->matchUser('editor@dsmg.co.uk', 'Editors');
-        $this->matchUser('user@dsmg.co.uk', 'Users');
+        $this->matchUser('he@he.he', 'Users');
     }
 
     /**
