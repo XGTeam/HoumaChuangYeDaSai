@@ -10,8 +10,11 @@ class ProjectController extends AbstractController
   public function __construct()
   {
     $this->setPermissions([
-      'getLoginUserProject' => 'user'
+      'getLoginUserProject' => 'user',
+      'create' => 'user'
     ]);
+
+    parent::__construct();
   }
 
   /**
@@ -22,5 +25,16 @@ class ProjectController extends AbstractController
     $user    = Credentials::getUser();
     $project = $user->project()->with('attachments', 'members', 'user')->first();
     return view('projects.show', compact('project'));
+  }
+
+  public function create()
+  {
+    $user = Credentials::getUser();
+
+    if ($user->isHasProject()) {
+      return Redirect::route('account.project')->with('error', '每人只能拥有一个参赛项目，您不能再添加新的参赛项目。');
+    }
+
+    return view('projects.create');
   }
 }

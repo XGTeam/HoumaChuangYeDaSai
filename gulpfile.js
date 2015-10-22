@@ -23,7 +23,8 @@ elixir(function (mix) {
   // Vendor styles
   mix.styles([
       'font-awesome/css/font-awesome.min.css',
-      'animate.css/animate.min.css'
+      'animate.css/animate.min.css',
+      'bootstrap-fileinput/css/fileinput.min.css',
   ], stylesPath + 'vendor.min.css', bowerPath);
 
   // Vendor javascripts
@@ -31,6 +32,8 @@ elixir(function (mix) {
       'jquery/dist/jquery.min.js',
       'jquery-timeago/jquery.timeago.js',
       'bootstrap/dist/js/bootstrap.min.js',
+      'bootstrap-fileinput/js/fileinput.min.js',
+      'bootstrap-fileinput/js/fileinput_locale_zh.js',
       'jqBootstrapValidation/dist/jqBootstrapValidation-1.3.7.min.js',
       'classie/classie.js',
       'jquery.easing/js/jquery.easing.min.js',

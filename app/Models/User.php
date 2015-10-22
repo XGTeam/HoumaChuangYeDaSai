@@ -50,4 +50,9 @@ class User extends CredentialsUser
         $this->deleteComments();
         $this->deleteProject();
     }
+
+    public function isHasProject()
+    {
+      return $this->project != null;
+    }
 }
