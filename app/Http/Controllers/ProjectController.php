@@ -2,6 +2,7 @@
 
 namespace GrahamCampbell\BootstrapCMS\Http\Controllers;
 
+use GrahamCampbell\Binput\Facades\Binput;
 use GrahamCampbell\BootstrapCMS\Models\Project;
 use GrahamCampbell\Credentials\Facades\Credentials;
 
@@ -36,5 +37,10 @@ class ProjectController extends AbstractController
     }
 
     return view('projects.create');
+  }
+
+  public function store()
+  {
+    var_dump(Binput::all()); exit;
   }
 }

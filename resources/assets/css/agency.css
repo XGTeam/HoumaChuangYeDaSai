@@ -691,9 +691,10 @@ section#enroll .form-group textarea.form-control {
     height: 236px;
 }
 
-section#enroll .form-control:focus {
+section#enroll .form-control:focus,
+.agency-form .form-control:focus {
     border-color: #fed136;
-    box-shadow: none;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(254,209,54,.6);
 }
 
 section#enroll::-webkit-input-placeholder {
@@ -724,7 +725,8 @@ section#enroll:-ms-input-placeholder {
     color: #bbb;
 }
 
-section#enroll .text-danger {
+section#enroll .text-danger,
+.agency-form .text-danger {
     color: #e74c3c;
 }
 
@@ -882,10 +884,10 @@ body {
   position: relative;
   border-radius: 3px;
   background: #ffffff;
-  border-top: 3px solid #d2d6de;
+  border-top: 3px solid #E3BC36;
   margin-bottom: 20px;
   width: 100%;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .box .box-body {
@@ -893,5 +895,5 @@ body {
   border-top-right-radius: 0;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
-  padding: 10px;
+  padding: 15px;
 }
