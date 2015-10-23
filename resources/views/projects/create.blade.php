@@ -105,10 +105,29 @@
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
-              <legend>核心团队信息</legend>
-              <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12">
+              <legend>
+                核心团队信息
+              </legend>
+              <div class="form-group">
+                <button class="btn btn-default btn-lg"
+                        data-toggle="tooltip"
+                        data-placement="right"
+                        id="new-member"
+                        title="添加核心团队成员">
+                  <i class="fa fa-user-plus"></i>
+                </button>
+              </div>
+              <div class="row members">
+                <div class="col-md-4 col-sm-6 col-xs-12 member" id="member0">
                   <div class="box">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">成员信息</h3>
+                      <div class="box-tools pull-right">
+                        <button class="btn btn-box-tool" data-widget="remove">
+                          <i class="fa fa-times"></i>
+                        </button>
+                      </div>
+                    </div>
                     <div class="box-body">
                       <div class="form-group control-group">
                         <div class="controls">
