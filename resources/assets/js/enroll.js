@@ -43,11 +43,33 @@ $(function() {
     });
   }
 
+  function initSingleAvatar() {
+    $('input.fileupload.avatar').fileinput({
+      language         : 'zh',
+      previewFileType  : 'image',
+      allowedFileTypes : [ 'image' ],
+      showUpload       : false,
+      showCancel       : false
+    });
+  }
+
+  function initMultipleAvatars() {
+    $('input.fileupload.avatars').fileinput({
+      language         : 'zh',
+      uploadUrl        : '/attachments/upload',
+      uploadAsync      : true,
+      maxFileCount     : 5
+    });
+  }
+
   function init() {
     window.initJqBoostrapValidation();
 
     listenClickEventOnNewMemberButton();
     listenClickEventOnRemoveMemberButton();
+
+    initSingleAvatar();
+    initMultipleAvatars();
   }
 
   init();

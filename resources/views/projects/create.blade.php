@@ -32,7 +32,7 @@
                 <div class="controls">
                   <label>展示图 <small class="text-danger">请上传360 x 260大小方形图片</small></label>
                   <input type="file"
-                         class="form-control"
+                         class="form-control fileupload avatar"
                          name="project[avatar]"
                          required
                          data-validation-required-message="请添加展示图">
@@ -101,7 +101,10 @@
               <div class="form-group control-group">
                 <div class="controls">
                   <label>附件 <small class="text-danger">请上传PPT或者其他说明项目的文件</small></label>
-                  <input type="file" name="project[attachments][]" class="form-control">
+                  <input type="file"
+                         name="project[attachments][]"
+                         multiple
+                         class="form-control fileupload avatars">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>

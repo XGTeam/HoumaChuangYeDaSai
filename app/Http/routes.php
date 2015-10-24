@@ -55,3 +55,6 @@ if (Config::get('cms.events')) {
 // 用户参赛资料
 $router->get('account/project', ['as' => 'account.project', 'uses' => 'ProjectController@getLoginUserProject']);
 $router->resource('projects', 'ProjectController');
+
+// 文件上传
+Route::any('attachments/upload', 'AttachmentController@store');
