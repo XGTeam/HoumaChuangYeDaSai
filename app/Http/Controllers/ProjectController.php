@@ -44,6 +44,20 @@ class ProjectController extends AbstractController
 
   public function updateLoginUserProject()
   {
+    $repository = new ProjectRepository();
+    $user       = Credentials::getUser();
+    $project    = $user->project;
+
+    $repository->update($project, Binput::all());
+
+    if (Request::ajax()) {
+      return response()->json([
+        'state' => 'OK',
+        'href'  => action('ProjectController@show', ['id' => $project->id])
+      ]);
+    }
+
+    return redirect()->action('ProjectController@show', ['id' => $project->id])->with('success', '比赛资料修改成功！');
   }
 
   public function initialPreview()

@@ -26,15 +26,34 @@ class ProjectRepository
     });
   }
 
+  public function update($project, $input)
+  {
+    return DB::transaction(function () use ($project, $input) {
+      // 保存基本信息
+      $this->parseAndUpdate($project, $input);
+      // 保存成员信息
+      $this->parseAndUpdateMembers($project, $input);
+      // 保存附件信息
+      $this->parseAndUpdateAttachments($project, $input);
+
+      return $project;
+    });
+  }
+
   public function parseAndCreate($input)
   {
     $project = new Project(Arr::get($input, 'project'));
 
     $project->user_id = Credentials::getUser()->id;
-    $project->avatar  = Arr::get($input, 'project.avatar');
     $project->save();
 
     return $project;
+  }
+
+  public function parseAndUpdate($project, $input)
+  {
+    $project->fill(Arr::get($input, 'project'));
+    $project->save();
   }
 
   public function parseAndStoreMembers($project, $input)
@@ -48,9 +67,21 @@ class ProjectRepository
     }
   }
 
+  public function parseAndUpdateMembers($project, $input)
+  {
+    $project->members()->delete();
+    $this->parseAndStoreMembers($project, $input);
+  }
+
   public function parseAndStoreAttachments($project, $input)
   {
     $attachmentIds = Arr::get($input, 'attachment_ids');
     Attachment::whereIn('id', $attachmentIds)->update(['project_id' => $project->id]);
+  }
+
+  public function parseAndUpdateAttachments($project, $input)
+  {
+    $project->attachments()->delete();
+    $this->parseAndStoreAttachments($project, $input);
   }
 }
