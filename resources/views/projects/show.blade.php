@@ -62,24 +62,51 @@
           </div>
           <div class="row">
             <div class="col-xs-12">
-              <p class="lead">核心团队成员</p>
+              <p class="lead">核心团队</p>
               <div class="row">
                 @foreach($project->members as $member)
-                  <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="col-md-4 col-sm-6 col-xs-12 member">
                     <div class="box box-muted">
                       <h4 class="box-header with-border">
                         {{ $member->name }}
+                        <p><small class="text-muted">{{ $member->title }}</small></p>
+                      </h4>
+                      <div class="box-body">
+                        <address>
+                        {{ $member->age }}&nbsp;,&nbsp;&nbsp;{{ $member->sex == 0 ? '男' : '女' }}
+                        <br>
+                        {{ $member->academy }}&nbsp;,&nbsp;&nbsp;{{ $member->diploma }}
+                        <br>
+                        {{ $member->description }}
+                        </address>
                       </div>
                     </div>
                   </div>
+                @endforeach
+              </div>
+              <p class="lead">项目附件</p>
+              <div class="row">
+                @foreach($project->attachments as $attachment)
+                  <div class="col-md-3 col-sm-6 col-xs-12 attachment-preview text-center">
+                    <i class="fa fa-file-o fa-4x"></i>
+                    <h5>
+                      {{ $attachment->avatar_file_name }}
+                      &nbsp;
+                      <a class="text-success"
+                         data-toggle="tooltip"
+                         title="下载文件"
+                         href="{{ route('attachments.download', ['id' => $attachment->id]) }}">
+                        <i class="fa fa-download"></i>
+                      </a>
+                  </div>
+                    </h5>
                 @endforeach
               </div>
             </div>
           </div>
         </div>
       </div>
-    @endif
-  </div>
-</section>
-@stop
-
+      @endif
+    </div>
+  </section>
+  @stop

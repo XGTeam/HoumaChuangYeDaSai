@@ -35,7 +35,7 @@ class AttachmentRepository extends AbstractRepository
 
     switch (strtolower($fileType)) {
     case 'image':
-      return "<img src=\"{$attachment->avatar->url()}\" class=\"file-preview-image\">";
+      return "<img src=\"{$attachment->avatar->url()}\" class=\"file-preview-image\" style=\"width:auto;height:160px;\">";
       break;
     case 'text':
       $content = file_get_contents($attachment->avatar->path());

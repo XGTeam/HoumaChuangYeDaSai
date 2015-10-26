@@ -42,4 +42,11 @@ class AttachmentController extends AbstractController
     Attachment::destroy($id);
     return response()->json([]);
   }
+
+  public function download($id)
+  {
+    $attachment = Attachment::find($id);
+
+    return response()->download($attachment->avatar->path());
+  }
 }

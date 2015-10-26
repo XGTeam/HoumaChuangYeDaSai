@@ -60,3 +60,4 @@ $router->resource('projects', 'ProjectController');
 Route::post('attachments/upload', 'AttachmentController@store');
 Route::post('attachments/delete', 'AttachmentController@destroy');
 Route::delete('attachments/delete', 'AttachmentController@destroy');
+Route::get('attachments/download/{id}', ['as' => 'attachments.download', 'uses' => 'AttachmentController@download']);

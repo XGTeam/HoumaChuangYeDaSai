@@ -891,7 +891,7 @@ body {
 }
 
 .box.box-muted {
-  border-top-color: #eee;
+  border-top-color: #aaa;
 }
 
 .box .box-body {
@@ -909,7 +909,7 @@ body {
 .box-header {
   color: #444;
   display: block;
-  padding: 10px;
+  padding: 15px;
   position: relative;
 }
 
@@ -934,3 +934,14 @@ body {
   color: #97a0b3;
 }
 
+.member .box-header {
+  padding-bottom: 0;
+}
+
+.member .box-header p {
+  margin-bottom: 0;
+}
+
+.member .box-body {
+  padding-top: 0;
+}
