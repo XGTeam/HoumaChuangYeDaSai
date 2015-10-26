@@ -238,6 +238,21 @@ fieldset[disabled] .btn-xl.active {
   color: #555;
 }
 
+.navbar-brand img {
+  height: 72px;
+  margin-top: -15px;
+  margin-bottom: -15px;
+  display: none;
+}
+
+.navbar-brand .navbar-brand-text {
+  display: none;
+}
+
+.navbar-default.navbar-shrink .navbar-brand .navbar-brand-text {
+  display: inline;
+}
+
 .dropdown-menu .divider {
   background-color: #333;
 }
@@ -271,6 +286,19 @@ fieldset[disabled] .btn-xl.active {
     .navbar-default.navbar-shrink .navbar-brand {
         font-size: 1.5em;
     }
+
+    .navbar-brand img {
+      height: 100px;
+      margin-top: -15px;
+      margin-bottom: -15px;
+      display: block;
+    }
+
+    .navbar-default.navbar-shrink .navbar-brand img {
+      height: 72px;
+      width: auto;
+    }
+
 }
 
 header {

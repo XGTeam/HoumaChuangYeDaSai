@@ -7,7 +7,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="{!! $main[0]['url'] !!}">{{ $title }}</a>
+            <a class="navbar-brand page-scroll" href="{!! $main[0]['url'] !!}">
+              <img src="/assets/images/logo.svg" alt="{{ $title }}" class="navbar-left">
+              <span class="navbar-brand-text"> {{ '&nbsp;&nbsp;' . $title }} </span>
+            </a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
