@@ -81,7 +81,7 @@ class ProjectRepository
 
   public function parseAndUpdateAttachments($project, $input)
   {
-    $project->attachments()->delete();
+    $project->attachments()->update(['project_id' => null]);
     $this->parseAndStoreAttachments($project, $input);
   }
 }

@@ -973,3 +973,7 @@ body {
 .member .box-body {
   padding-top: 0;
 }
+
+.cms-alert {
+  margin-top: 100px;
+}

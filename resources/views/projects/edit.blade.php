@@ -40,9 +40,7 @@
                   <label>展示图 <small class="text-danger">请上传360 x 260大小方形图片</small></label>
                   <input type="file"
                          class="form-control fileupload avatar"
-                         name="project[avatar]"
-                         required
-                         data-validation-required-message="请添加展示图">
+                         name="project[avatar]">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
