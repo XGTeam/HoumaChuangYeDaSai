@@ -19,7 +19,22 @@
     @else
       <div class="box">
         <div class="box-body">
-          <h3 class="page-header">{{ $project->name }}</h2>
+          <div class="clearfix">
+            <h3 class="page-header">
+              {{ $project->name }}
+              @if (Credentials::check() && Credentials::getUser()->id == $project->user_id)
+                <div class="pull-right">
+                  <a class="text-muted"
+                    href="/account/project/edit"
+                    data-toggle="tooltip"
+                    data-placement="left"
+                    title="修改资料">
+                    <i class="fa fa-edit"></i>
+                  </a>
+                </div>
+              @endif
+            </h3>
+          </div>
           <div class="row">
             <div class="col-sm-6 col-xs-12">
               <p class="lead">项目信息</p>
@@ -88,18 +103,20 @@
               <div class="row">
                 @foreach($project->attachments as $attachment)
                   <div class="col-md-3 col-sm-6 col-xs-12 attachment-preview text-center">
-                    <i class="fa fa-file-o fa-4x"></i>
-                    <h5>
+                    <i class="fa fa-file-o fa-4x text-muted"></i>
+                    <h5 class="text-muted">
                       {{ $attachment->avatar_file_name }}
-                      &nbsp;
-                      <a class="text-success"
+                    </h5>
+                    <div>
+                      <a class="btn btn-default btn-primary"
                          data-toggle="tooltip"
+                         data-placement="bottom"
                          title="下载文件"
                          href="{{ route('attachments.download', ['id' => $attachment->id]) }}">
-                        <i class="fa fa-download"></i>
+                        &nbsp;&nbsp;&nbsp;<i class="fa fa-download"></i>&nbsp;&nbsp;&nbsp;
                       </a>
+                    </div>
                   </div>
-                    </h5>
                 @endforeach
               </div>
             </div>
