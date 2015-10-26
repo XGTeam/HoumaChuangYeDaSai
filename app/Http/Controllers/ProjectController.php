@@ -15,6 +15,7 @@ class ProjectController extends AbstractController
   {
     $this->setPermissions([
       'getLoginUserProject' => 'user',
+      'editLoginUserProject' => 'user',
       'create' => 'user'
     ]);
 
@@ -29,6 +30,17 @@ class ProjectController extends AbstractController
     $user    = Credentials::getUser();
     $project = $user->project()->with('attachments', 'members', 'user')->first();
     return view('projects.show', compact('project'));
+  }
+
+  public function editLoginUserProject()
+  {
+    $user    = Credentials::getUser();
+    $project = $user->project()->with('attachments', 'members', 'user')->first();
+    return view('projects.edit', compact('project'));
+  }
+
+  public function updateLoginUserProject()
+  {
   }
 
   public function show($id)

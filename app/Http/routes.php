@@ -55,6 +55,9 @@ if (Config::get('cms.events')) {
 // 用户参赛资料
 $router->get('account/project', ['as' => 'account.project', 'uses' => 'ProjectController@getLoginUserProject']);
 $router->resource('projects', 'ProjectController');
+$router->get('account/project/edit', ['as' => 'account.project.edit', 'uses' => 'ProjectController@editLoginUserProject']);
+$router->put('account/project', 'ProjectController@updateLoginUserProject');
+$router->patch('account/project', 'ProjectController@updateLoginUserProject');
 
 // 文件上传
 Route::post('attachments/upload', 'AttachmentController@store');
