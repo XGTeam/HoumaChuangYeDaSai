@@ -907,6 +907,10 @@ body {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 
+.box.box-muted {
+  border-top-color: #eee;
+}
+
 .box .box-body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;

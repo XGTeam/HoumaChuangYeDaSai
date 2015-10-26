@@ -6,11 +6,24 @@ use GrahamCampbell\Credentials\Models\AbstractModel;
 use GrahamCampbell\BootstrapCMS\Models\Relations\BelongsToProjectTrait;
 use Codesleeve\Stapler\ORM\StaplerableInterface;
 use Codesleeve\Stapler\ORM\EloquentTrait;
-use McCool\LaravelAutoPresenter\HasPresenter;
 
-class Attachment extends AbstractModel implements StaplerableInterface, HasPresenter
+class Attachment extends AbstractModel implements StaplerableInterface
 {
   use BelongsToProjectTrait, EloquentTrait;
+
+  /**
+   * The table the events are stored in.
+   *
+   * @var string
+   */
+  protected $table = 'attachments';
+
+  /**
+   * The model name.
+   *
+   * @var string
+   */
+  public static $name = 'attachment';
 
   protected $fillable = ['avatar'];
 
@@ -18,10 +31,5 @@ class Attachment extends AbstractModel implements StaplerableInterface, HasPrese
     $this->hasAttachedFile('avatar');
 
     parent::__construct($attributes);
-  }
-
-  public function getPresenterClass()
-  {
-    return 'GrahamCampbell\BootstrapCMS\Presenters\AttachmentPresenter';
   }
 }

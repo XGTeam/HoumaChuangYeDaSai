@@ -15,8 +15,7 @@ class Project extends AbstractModel implements StaplerableInterface, HasPresente
   use BelongsToUserTrait, HasManyMembersTrait, HasManyAttachmentsTrait, EloquentTrait;
 
   protected $fillable = [
-    'avatar', 'leader_name', 'leader_phone', 'name', 'home_page', 'step',
-    'brief'
+    'avatar', 'leader_name', 'leader_phone', 'name', 'home_page', 'step', 'brief'
   ];
 
   public function __construct(array $attributes = array()) {
@@ -33,6 +32,6 @@ class Project extends AbstractModel implements StaplerableInterface, HasPresente
 
   public function getPresenterClass()
   {
-    return 'GrahamCampbell\BootstrapCMS\Presenters\ProjectPresenter';
+    return '\GrahamCampbell\BootstrapCMS\Presenters\ProjectPresenter';
   }
 }

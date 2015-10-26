@@ -11,7 +11,8 @@ class AttachmentController extends AbstractController
   public function __construct()
   {
     $this->setPermissions([
-      'store' => 'user'
+      'store' => 'user',
+      'destroy' => 'user',
     ]);
   }
 
@@ -32,5 +33,13 @@ class AttachmentController extends AbstractController
 
       return response()->json(AttachmentRepository::krajee($uploaded));
     }
+  }
+
+  public function destroy()
+  {
+    $id = Binput::get('id');
+
+    Attachment::destroy($id);
+    return response()->json([]);
   }
 }

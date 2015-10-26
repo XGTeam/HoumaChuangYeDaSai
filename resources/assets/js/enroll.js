@@ -57,8 +57,20 @@ $(function() {
     $('input.fileupload.avatars').fileinput({
       language         : 'zh',
       uploadUrl        : '/attachments/upload',
-      uploadAsync      : true,
-      maxFileCount     : 5
+      uploadAsync      : true
+    });
+  }
+
+  function listenFileUploadedEvent() {
+    $('input.fileupload.avatars').on('fileuploaded', function(event, data) {
+      var attachmentId = data.response.initialPreviewConfig[0].key;
+      $('.attachments').append("<input type='hidden' name='attachment_ids[]' value='" + attachmentId + "'>");
+    });
+  }
+
+  function listenFileDeletedEvent() {
+    $('input.fileupload.avatars').on('filedeleted', function(event, attachmentId) {
+      $('.attachments input[value=' + attachmentId + ']').remove();
     });
   }
 
@@ -70,6 +82,8 @@ $(function() {
 
     initSingleAvatar();
     initMultipleAvatars();
+    listenFileUploadedEvent();
+    listenFileDeletedEvent();
   }
 
   init();

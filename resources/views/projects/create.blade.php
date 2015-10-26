@@ -14,7 +14,11 @@
             <h1 class="text-center">添加参赛项目</h1>
           </div>
           <div class="box-body">
-            <form action="{{ route('projects.store') }}" method="POST" novalidate class="agency-form">
+            <form action="{{ route('projects.store') }}"
+                  method="POST"
+                  novalidate
+                  enctype="multipart/form-data"
+                  class="agency-form">
               {{ csrf_field() }}
               <legend>项目基本信息</legend>
               <div class="form-group control-group">
@@ -98,9 +102,9 @@
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
-              <div class="form-group control-group">
+              <div class="form-group control-group attachments">
                 <div class="controls">
-                  <label>附件 <small class="text-danger">请上传PPT或者其他说明项目的文件</small></label>
+                  <label>附件 <small class="text-danger">请上传PPT或者其他说明项目的文件, 请点击上传后再保存表单</small></label>
                   <input type="file"
                          name="project[attachments][]"
                          multiple
@@ -151,7 +155,7 @@
                                  name="project[members][0][age]"
                                  min="1"
                                  data-validation-min-message="成员年龄不能小于1岁"
-                                 pattern="\d"
+                                 pattern="\d*"
                                  data-validation-pattern-message="请填写正确的年龄"
                                  required
                                  data-validation-required-message="请填写成员年龄">
@@ -235,5 +239,3 @@
   </div>
 </section>
 @stop
-
-

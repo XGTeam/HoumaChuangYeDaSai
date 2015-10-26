@@ -57,4 +57,6 @@ $router->get('account/project', ['as' => 'account.project', 'uses' => 'ProjectCo
 $router->resource('projects', 'ProjectController');
 
 // 文件上传
-Route::any('attachments/upload', 'AttachmentController@store');
+Route::post('attachments/upload', 'AttachmentController@store');
+Route::post('attachments/delete', 'AttachmentController@destroy');
+Route::delete('attachments/delete', 'AttachmentController@destroy');
