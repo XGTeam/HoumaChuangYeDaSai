@@ -8,6 +8,7 @@ use GrahamCampbell\Binput\Facades\Binput;
 use GrahamCampbell\BootstrapCMS\Models\Project;
 use GrahamCampbell\Credentials\Facades\Credentials;
 use GrahamCampbell\BootstrapCMS\Repositories\ProjectRepository;
+use GrahamCampbell\BootstrapCMS\Repositories\AttachmentRepository;
 
 class ProjectController extends AbstractController
 {
@@ -16,6 +17,8 @@ class ProjectController extends AbstractController
     $this->setPermissions([
       'getLoginUserProject' => 'user',
       'editLoginUserProject' => 'user',
+      'initialPreview' => 'user',
+      'updateLoginUserProject' => 'user',
       'create' => 'user'
     ]);
 
@@ -41,6 +44,16 @@ class ProjectController extends AbstractController
 
   public function updateLoginUserProject()
   {
+  }
+
+  public function initialPreview()
+  {
+    $user               = Credentials::getUser();
+    $project            = $user->project()->with('attachments')->first();
+    $avatarPreview      = AttachmentRepository::krajee($project);
+    $attachmentsPreview = AttachmentRepository::krajee($project->attachments);
+
+    return response()->json(['avatar' => $avatarPreview, 'attachments' => $attachmentsPreview]);
   }
 
   public function show($id)

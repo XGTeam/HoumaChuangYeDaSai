@@ -44,21 +44,51 @@ $(function() {
   }
 
   function initSingleAvatar() {
-    $('input.fileupload.avatar').fileinput({
-      language         : 'zh',
-      previewFileType  : 'image',
-      allowedFileTypes : [ 'image' ],
-      showUpload       : false,
-      showCancel       : false
-    });
+    if ($('body').has('#edit-form').length > 0) {
+      var jqXHR = $.getJSON('/account/project/initialPreview');
+      jqXHR.done(function(data) {
+        $('input.fileupload.avatar').fileinput({
+          language         : 'zh',
+          previewFileType  : 'image',
+          allowedFileTypes : [ 'image' ],
+          showUpload       : false,
+          showCancel       : false,
+          initialPreview   : data.avatar.initialPreview,
+          append           : data.avatar.append
+        });
+      });
+    } else {
+      $('input.fileupload.avatar').fileinput({
+        language         : 'zh',
+        previewFileType  : 'image',
+        allowedFileTypes : [ 'image' ],
+        showUpload       : false,
+        showCancel       : false
+      });
+    }
   }
 
   function initMultipleAvatars() {
-    $('input.fileupload.avatars').fileinput({
-      language         : 'zh',
-      uploadUrl        : '/attachments/upload',
-      uploadAsync      : true
-    });
+    if ($('body').has('#edit-form').length > 0) {
+      var jqXHR = $.getJSON('/account/project/initialPreview');
+      jqXHR.done(function(data) {
+        $('input.fileupload.avatars').fileinput({
+          language             : 'zh',
+          uploadUrl            : '/attachments/upload',
+          uploadAsync          : true,
+          initialPreview       : data.attachments.initialPreview,
+          initialPreviewConfig : data.attachments.initialPreviewConfig,
+          append               : data.avatar.append,
+          overwriteInitial     : false
+        });
+      });
+    } else {
+      $('input.fileupload.avatars').fileinput({
+        language         : 'zh',
+        uploadUrl        : '/attachments/upload',
+        uploadAsync      : true
+      });
+    }
   }
 
   function listenFileUploadedEvent() {

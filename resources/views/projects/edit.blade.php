@@ -117,6 +117,9 @@
                          class="form-control fileupload avatars">
                   <p class="help-block text-danger"></p>
                 </div>
+                @foreach($project->attachments as $attachment)
+                  <input type="hidden" name="attachment_ids[]" value="{{ $attachment->id }}">
+                @endforeach
               </div>
               <legend>
                 核心团队信息

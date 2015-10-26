@@ -5,13 +5,14 @@ namespace GrahamCampbell\BootstrapCMS\Repositories;
 use Config;
 use Request;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Collection;
 use GrahamCampbell\Credentials\Repositories\AbstractRepository;
 
 class AttachmentRepository extends AbstractRepository
 {
   public static function krajee($uploaded, $error = '', $append = true)
   {
-    if (!is_array($uploaded)) {
+    if (!is_array($uploaded) && !($uploaded instanceof Collection)) {
       $uploaded = [$uploaded];
     }
 
@@ -31,9 +32,10 @@ class AttachmentRepository extends AbstractRepository
 
   public static function initialPreview($attachment)
   {
-    $fileType   = current(explode('/', $attachment->avatar_content_type));
+    $array      = explode('/', $attachment->avatar_content_type);
+    $fileType   = current($array);
 
-    switch (strtolower($fileType)) {
+    switch ($fileType) {
     case 'image':
       return "<img src=\"{$attachment->avatar->url()}\" class=\"file-preview-image\" style=\"width:auto;height:160px;\">";
       break;

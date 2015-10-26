@@ -58,6 +58,7 @@ $router->resource('projects', 'ProjectController');
 $router->get('account/project/edit', ['as' => 'account.project.edit', 'uses' => 'ProjectController@editLoginUserProject']);
 $router->put('account/project', 'ProjectController@updateLoginUserProject');
 $router->patch('account/project', 'ProjectController@updateLoginUserProject');
+$router->get('account/project/initialPreview', 'ProjectController@initialPreview');
 
 // 文件上传
 Route::post('attachments/upload', 'AttachmentController@store');
