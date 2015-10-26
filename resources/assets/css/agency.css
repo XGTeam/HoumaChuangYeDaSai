@@ -977,3 +977,19 @@ body {
 .cms-alert {
   margin-top: 100px;
 }
+
+.timeline>li .timeline-image.timeline-image-blue {
+  background-color: #3698FE;
+}
+
+.timeline>li .timeline-image.timeline-image-red {
+  background-color: #FE3689;
+}
+
+.timeline>li .timeline-image.timeline-image-green {
+  background-color: #41C320;
+}
+
+.timeline>li .timeline-image.timeline-image-purple {
+  background-color: #B236DA;
+}
