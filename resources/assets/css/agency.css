@@ -993,3 +993,28 @@ body {
 .timeline>li .timeline-image.timeline-image-purple {
   background-color: #B236DA;
 }
+
+.faq-list .faq {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.faq-list ul {
+  padding-left: 20px;
+}
+
+.faq-list h3 {
+  color: #EAC31C;
+  margin-bottom: 15px;
+}
+
+.faq-list .faq p, .faq-list ul li {
+  font-size: 16px;
+  color: #796A6A;
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+
+#enroll .section-subheading {
+  color: #fafafa;
+}

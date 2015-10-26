@@ -1,1 +1,80 @@
-<p class="lead">This is the about page!</p>
+<section class="bg-light-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 col-xs-12">
+        <div class="box">
+          <div class="box-body">
+            <h2 class="page-header">FAQ</h2>
+
+            <div class="faq-list">
+              <div class="faq">
+                <h3>
+                  <i class="fa fa-bullhorn"></i>
+                  参加大赛能给我带来哪些益处？
+                </h3>
+                <p>
+                  <ul>
+                    <li>优秀项目孵化计划</li>
+                    <li>政府政策支持, 优先予以扶持</li>
+                    <li>需要申请银行贷款的获奖项目，组委会办公室将向担保机构优先推荐</li>
+                    <li>大赛奖金</li>
+                  </ul>
+                </p>
+              </div>
+              <div class="faq">
+                <h3>
+                  <i class="fa fa-bullhorn"></i>
+                  对于参赛团队有哪些要求？
+                </h3>
+                <p>
+                  <ul>
+                    <li>拥有科技创新成果和创业计划的创业团队，国内外高校毕业的大专以上学历学生，以及各类有志创业的人才。（如海外留学回国创业人员、进入创业实施阶段的优秀科技团队、大学生创业团队等）</li>
+                    <li>参赛项目的产品、技术及相关专利归属参赛团队，与其它任何企业无产权纠纷</li>
+                    <li>能在侯马经济开发区注册公司</li>
+                    <li>理论上未经过融资的创业团队</li>
+                  </ul>
+                </p>
+              </div>
+              <div class="faq">
+                <h3>
+                  <i class="fa fa-bullhorn"></i>
+                  我是否可以修改我的参赛资料？
+                </h3>
+                <p>
+                  当然可以。您可以重复修改您的团队信息、团队成员信息、增加和删减团队成员。
+                </p>
+              </div>
+              <div class="faq">
+                <h3>
+                  <i class="fa fa-bullhorn"></i>
+                  我报名参赛了，多久可以反馈给我？
+                </h3>
+                <p>
+                  报名资料将会统一审核，审核结束后，会在官方网站、微博、微信上公布。
+                </p>
+              </div>
+              <div class="faq">
+                <h3>
+                  <i class="fa fa-bullhorn"></i>
+                  主要从哪些方面来筛选参赛团队？
+                </h3>
+                <p>
+                  这个得具体情况具体分析；总的来说，大赛从市场前景、科技创新、成长空间、商业模式、创始团队、项目环境六个方面评审。
+                </p>
+              </div>
+              <div class="faq">
+                <h3>
+                  <i class="fa fa-bullhorn"></i>
+                  我还有其他问题，怎么提问？
+                </h3>
+                <p>
+                  欢迎 <a href="mailto:i@hhrplus.com" class="text-primary">通过邮件与我们联系</a>，我们会在第一时间回复你。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

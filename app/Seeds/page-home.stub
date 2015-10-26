@@ -329,8 +329,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
+                <br>
+                <br>
                 <h2 class="section-heading">报名参赛</h2>
-                <h3 class="section-subheading text-muted">请务必填写真实资料</h3>
+                <h3 class="section-subheading">请务必填写真实资料<br></h3>
             </div>
         </div>
         <div class="row">
