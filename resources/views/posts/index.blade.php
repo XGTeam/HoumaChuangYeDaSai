@@ -7,7 +7,7 @@
 @section('content')
 <section class="bg-light-gray">
   <div class="container">
-    <div class="col-md-10 col-md-offset-1 col-xs-12">
+    <div class="col-sm-10 col-sm-offset-1 col-xs-12">
       <div class="box">
         <div class="box-body">
           <div class="clearfix">
@@ -39,12 +39,12 @@
               <p class="post-summary">
                   {!! $post->summary !!}
               </p>
-              <p class="text-muted post-clock">
+              <p class="post-clock on-post-bottom">
                 <i class="fa fa-clock-o"></i>
                 {!! html_ago($post->created_at) !!}
               </p>
               @auth('blog')
-                <div class="post-tools clearfix">
+                <div class="post-tools clearfix on-post-bottom">
                   <a class="text-muted"
                     data-toggle="tooltip"
                     data-placement="bottom"

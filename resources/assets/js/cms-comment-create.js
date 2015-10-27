@@ -3,7 +3,7 @@ function cmsCommentMessage(message, type) {
 }
 
 function cmsCommentCreateSubmit(that) {
-    cmsCommentMessage("Submitting comment...", "info");
+    cmsCommentMessage("提交评论中...", "info");
     $(that).ajaxSubmit({
         dataType: 'json',
         clearForm: true,
@@ -11,13 +11,13 @@ function cmsCommentCreateSubmit(that) {
         timeout: 5000,
         success: function(data, status, xhr) {
             if (!xhr.responseJSON) {
-                cmsCommentMessage("There was an unknown error!", "error");
+                cmsCommentMessage("发生了未知错误，请稍后再试。", "error");
                 cmsCommentLock = false;
                 return;
             }
             if (xhr.responseJSON.success !== true || !xhr.responseJSON.msg || !xhr.responseJSON.contents || !xhr.responseJSON.comment_id) {
                 if (!xhr.responseJSON.msg) {
-                    cmsCommentMessage("There was an unknown error!", "error");
+                    cmsCommentMessage("发生了未知错误，请稍后再试。", "error");
                     cmsCommentLock = false;
                     return;
                 }
@@ -51,7 +51,7 @@ function cmsCommentCreateSubmit(that) {
         },
         error: function(xhr, status, error) {
             if (!xhr.responseJSON || !xhr.responseJSON.msg) {
-                cmsCommentMessage("There was an unknown error!", "error");
+                cmsCommentMessage("发生了未知错误，请稍后再试。", "error");
                 cmsCommentLock = false;
                 return;
             }

@@ -23,7 +23,8 @@ function cmsCommentSubmit(that) {
             });
         },
         error: function(xhr, status, error) {
-            $("#edit_comment").modal("hide");
+          console.log(xhr, status, error);
+          $("#edit_comment").modal("hide");
         }
     });
 }

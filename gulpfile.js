@@ -32,6 +32,7 @@ elixir(function (mix) {
       'jquery/dist/jquery.min.js',
       'jquery-timeago/jquery.timeago.js',
       'jquery-timeago/locales/jquery.timeago.zh-CN.js',
+      'jquery-form/jquery.form.js',
       'bootstrap/dist/js/bootstrap.min.js',
       'bootstrap-fileinput/js/fileinput.min.js',
       'bootstrap-fileinput/js/fileinput_locale_zh.js',
