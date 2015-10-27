@@ -4,45 +4,71 @@
 Blog
 @stop
 
-@section('top')
-<div class="page-header">
-<h1>Blog</h1>
-</div>
-@stop
-
 @section('content')
-<div class="row">
-    <div class="col-xs-8">
-        <p class="lead">
-            @if (count($posts) == 0)
-                There are currently no blog posts.
-            @else
-                Here you may find our blog posts:
-            @endif
-        </p>
-    </div>
-    @auth('blog')
-        <div class="col-xs-4">
-            <div class="pull-right">
-                <a class="btn btn-primary" href="{!! URL::route('blog.posts.create') !!}"><i class="fa fa-book"></i> New Post</a>
+<section class="bg-light-gray">
+  <div class="container">
+    <div class="col-md-10 col-md-offset-1 col-xs-12">
+      <div class="box">
+        <div class="box-body">
+          <div class="clearfix">
+            <h2 class="page-header">
+              大赛新闻
+              @auth('blog')
+                <div class="pull-right">
+                  <a class="btn btn-primary"
+                     data-toggle="tooltip"
+                     data-placement="left"
+                     title="发布新闻"
+                     href="{!!  URL::route('blog.posts.create') !!}">
+                    <i class="fa fa-rocket fa-fw"></i>
+                    发布新闻
+                  </a>
+                </div>
+              @endauth
+            </h2>
+          </div>
+          @foreach($posts as $post)
+            <div class="post">
+              <div class="post-header">
+                <h2 class="post-title">
+                  <a href="{!! URL::route('blog.posts.show', array('posts' => $post->id)) !!}">
+                    {!! $post->title !!}
+                  </a>
+                </h2>
+              </div>
+              <p class="post-summary">
+                  {!! $post->summary !!}
+              </p>
+              <p class="text-muted post-clock">
+                <i class="fa fa-clock-o"></i>
+                {!! html_ago($post->created_at) !!}
+              </p>
+              @auth('blog')
+                <div class="post-tools clearfix">
+                  <a class="text-muted"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="编辑新闻"
+                    href="{!! URL::route('blog.posts.edit', array('posts' => $post->id)) !!}">
+                    <i class="fa fa-pencil fa-fw"></i>
+                  </a>
+                  <a class="text-muted"
+                    data-toggle="modal"
+                    data-target="#delete_post_{!! $post->id !!}"
+                    title="删除新闻"
+                    href="#delete_post_{!! $post->id !!}">
+                    <i class="fa fa-trash fa-fw"></i>
+                  </a>
+                </div>
+              @endauth
             </div>
+          @endforeach
+          {!! $links !!}
         </div>
-    @endauth
-</div>
-@foreach($posts as $post)
-    <h2>{!! $post->title !!}</h2>
-    <p>
-        <strong>{!! $post->summary !!}</strong>
-    </p>
-    <p>
-        <a class="btn btn-success" href="{!! URL::route('blog.posts.show', array('posts' => $post->id)) !!}"><i class="fa fa-file-text"></i> Show Post</a>
-        @auth('blog')
-             <a class="btn btn-info" href="{!! URL::route('blog.posts.edit', array('posts' => $post->id)) !!}"><i class="fa fa-pencil-square-o"></i> Edit Post</a> <a class="btn btn-danger" href="#delete_post_{!! $post->id !!}" data-toggle="modal" data-target="#delete_post_{!! $post->id !!}"><i class="fa fa-times"></i> Delete Post</a>
-        @endauth
-    </p>
-    <br>
-@endforeach
-{!! $links !!}
+      </div>
+    </div>
+  </div>
+</section>
 @stop
 
 @section('bottom')

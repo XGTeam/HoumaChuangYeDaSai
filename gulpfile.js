@@ -31,9 +31,9 @@ elixir(function (mix) {
   mix.scripts([
       'jquery/dist/jquery.min.js',
       'jquery-timeago/jquery.timeago.js',
+      'jquery-timeago/locales/jquery.timeago.zh-CN.js',
       'bootstrap/dist/js/bootstrap.min.js',
-      // 'bootstrap-fileinput/js/fileinput.min.js',
-      'bootstrap-fileinput/js/fileinput.js',
+      'bootstrap-fileinput/js/fileinput.min.js',
       'bootstrap-fileinput/js/fileinput_locale_zh.js',
       'jqBootstrapValidation/dist/jqBootstrapValidation-1.3.7.min.js',
       'classie/classie.js',

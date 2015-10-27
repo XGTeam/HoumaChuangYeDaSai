@@ -1015,6 +1015,53 @@ body {
   margin-top: 6px;
 }
 
+.post .post-summary {
+  font-size: 14px;
+  color: #796A6A;
+}
+
+.post {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px dotted #A9A3A3;
+  position: relative;
+}
+
+.post .post-title a {
+  color: #eac31c;
+}
+.post .post-title a:active,
+.post .post-title a:hover,
+.post .post-title a:focus {
+  color: #fed136;
+}
+
+.post:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.post .post-clock {
+  font-size: 12px;
+  color: #A9A3A3;
+  position: relative;
+  bottom: -40px;
+}
+
+.post .post-clock abbr {
+  border-bottom: none;
+}
+
+.post .post-tools {
+  background-color: #eee;
+  position: relative;
+  bottom: -40px;
+}
+
+.post .post-tools a {
+  font-size: 30px;
+}
+
 #enroll .section-subheading {
   color: #fafafa;
 }
