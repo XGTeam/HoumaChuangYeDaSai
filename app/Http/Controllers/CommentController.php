@@ -71,12 +71,12 @@ class CommentController extends AbstractController
     {
         $post = PostRepository::find($postId, ['id']);
         if (!$post) {
-            Session::flash('error', 'The post you were viewing has been deleted.');
+            Session::flash('error', '您查看的新闻已经被删除。');
 
             return Response::json([
                 'success' => false,
                 'code'    => 404,
-                'msg'     => 'The post you were viewing has been deleted.',
+                'msg'     => '您查看的新闻已经被删除。',
                 'url'     => URL::route('blog.posts.index'),
             ], 404);
         }
@@ -110,7 +110,7 @@ class CommentController extends AbstractController
         ]);
 
         if (CommentRepository::validate($input, array_keys($input))->fails()) {
-            throw new BadRequestHttpException('Your comment was empty.');
+            throw new BadRequestHttpException('您的评论是空的。');
         }
 
         $this->throttler->hit();
@@ -124,7 +124,7 @@ class CommentController extends AbstractController
 
         return Response::json([
             'success'    => true,
-            'msg'        => 'Comment created successfully.',
+            'msg'        => '评论创建成功。',
             'contents'   => $contents->render(),
             'comment_id' => $comment->id,
         ], 201);
@@ -172,7 +172,7 @@ class CommentController extends AbstractController
         $input = Binput::map(['edit_body' => 'body']);
 
         if (CommentRepository::validate($input, array_keys($input))->fails()) {
-            throw new BadRequestHttpException('Your comment was empty.');
+            throw new BadRequestHttpException('您的评论是空的。');
         }
 
         $comment = CommentRepository::find($id);
@@ -181,11 +181,11 @@ class CommentController extends AbstractController
         $version = Binput::get('version');
 
         if (empty($version)) {
-            throw new BadRequestHttpException('No version data was supplied.');
+            throw new BadRequestHttpException('没有提供版本信息。');
         }
 
         if ($version != $comment->version && $version) {
-            throw new ConflictHttpException('The comment was modified by someone else.');
+            throw new ConflictHttpException('这个评论已经被人修改了。');
         }
 
         $version++;
@@ -194,7 +194,7 @@ class CommentController extends AbstractController
 
         return Response::json([
             'success'      => true,
-            'msg'          => 'Comment updated successfully.',
+            'msg'          => '评论修改成功。',
             'comment_text' => nl2br(e($comment->body)),
             'comment_id'   => $id,
             'comment_ver'  => $version,
@@ -218,7 +218,7 @@ class CommentController extends AbstractController
 
         return Response::json([
             'success'    => true,
-            'msg'        => 'Comment deleted successfully.',
+            'msg'        => '评论删除成功。',
             'comment_id' => $id,
         ]);
     }
@@ -235,7 +235,7 @@ class CommentController extends AbstractController
     protected function checkComment($comment)
     {
         if (!$comment) {
-            throw new NotFoundHttpException('Comment Not Found');
+            throw new NotFoundHttpException('没有发现该评论。');
         }
     }
 }

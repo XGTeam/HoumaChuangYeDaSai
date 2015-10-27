@@ -34,7 +34,7 @@
               </div>
               <div class="form-group control-group">
                 <div class="controls">
-                  <label>展示图 <small class="text-danger">请上传360 x 260大小方形图片</small></label>
+                  <label>展示图 <small class="text-danger">请上传400 x 289大小方形图片</small></label>
                   <input type="file"
                          class="form-control fileupload avatar"
                          name="project[avatar]"

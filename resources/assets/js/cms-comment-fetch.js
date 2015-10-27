@@ -53,7 +53,7 @@ function cmsCommentFetchGet() {
     }
 
     if ($("#comments > div").length == 0 && $("#comments > p").length == 0) {
-        $("<p id=\"nocomments\">There are currently no comments.</p>").prependTo("#comments").hide().fadeIn(cmsCommentTime, function(){
+        $("<p id=\"nocomments\">暂无评论。</p>").prependTo("#comments").hide().fadeIn(cmsCommentTime, function(){
             cmsCommentLock = false;
             cmsCommentFetch();
         });

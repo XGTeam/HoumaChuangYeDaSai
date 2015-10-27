@@ -65,7 +65,7 @@ function cmsCommentCreate(bindval, body) {
     bindval = bindval || "#commentform";
     body = body || "textarea#body";
     $(bindval).submit(function() {
-        cmsCommentMessage("Waiting for lock to clear...", "info");
+        cmsCommentMessage("评论已被锁定，请等待...", "info");
         var that = this;
         var cmsCommentCreateCheck = setInterval(function() {
             if (cmsCommentLock == false) {
