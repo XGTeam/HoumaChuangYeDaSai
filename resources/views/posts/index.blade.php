@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('title')
-Blog
+大赛新闻
 @stop
 
 @section('content')
