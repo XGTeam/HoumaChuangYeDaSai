@@ -9,8 +9,8 @@
 @show
 <br>
 <p>
-Thank you, <br>
-The Support Team
+谢谢, <br>
+{{ Config::get('app.name') }} - 支持团队
 </p>
 </body>
 </html>
