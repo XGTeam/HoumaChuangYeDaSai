@@ -122,3 +122,87 @@ body {
 .carousel-fade .carousel-control {
     z-index: 2;
 }
+
+.login-box, .register-box {
+  width: 360px;
+  margin: 2% auto;
+}
+
+.login-logo, .register-logo {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+
+.login-logo a, .register-logo a {
+  color: #444;
+}
+
+.login-logo a:hover, .register-logo:hover,
+.login-logo a:active, .register-logo:active,
+.login-logo a:focus, .register-logo:focus {
+  color: #444;
+  text-decoration: none;
+}
+
+.login-box-body, .register-box-body {
+  background: #fff;
+  padding: 20px;
+  color: #444;
+  border-top: 0;
+  color: #666;
+}
+
+.login-box-msg, .register-box-msg {
+  margin: 0;
+  text-align: center;
+  padding: 0 20px 20px 20px;
+}
+
+.has-feedback {
+  position: relative;
+}
+
+.has-feedback .form-control {
+  padding-right: 42.5px;
+}
+
+.form-control:not(select) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.login-box-body .form-control-feedback, .register-box-body .form-control-feedback {
+  color: #777;
+}
+
+.form-control-feedback {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.btn.btn-flat {
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-width: 1px;
+}
+
+.login-page, .register-page {
+  background: #d2d6de;
+}
+
+.without-radius.form-control {
+  border-radius: 0;
+}
