@@ -48,7 +48,7 @@ class ProjectController extends AbstractController
     $user       = Credentials::getUser();
     $project    = $user->project;
 
-    $repository->update($project, Binput::all());
+    $repository->update($project, Request::all());
 
     if (Request::ajax()) {
       return response()->json([
@@ -98,7 +98,7 @@ class ProjectController extends AbstractController
   public function store()
   {
     $repository = new ProjectRepository();
-    $project = $repository->store(Binput::all());
+    $project = $repository->store(Request::all());
 
     if (Request::ajax()) {
       return response()->json([

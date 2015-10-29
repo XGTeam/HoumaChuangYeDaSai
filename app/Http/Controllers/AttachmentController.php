@@ -2,6 +2,7 @@
 
 namespace GrahamCampbell\BootstrapCMS\Http\Controllers;
 
+use Request;
 use GrahamCampbell\Binput\Facades\Binput;
 use GrahamCampbell\BootstrapCMS\Models\Attachment;
 use GrahamCampbell\BootstrapCMS\Repositories\AttachmentRepository;
@@ -18,7 +19,7 @@ class AttachmentController extends AbstractController
 
   public function store()
   {
-    $files = array_get(Binput::all(), 'project.attachments');
+    $files = array_get(Request::all(), 'project.attachments');
 
     if (!empty($files)) {
       $uploaded = [];
