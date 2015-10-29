@@ -85,7 +85,7 @@ class PostController extends AbstractController
         $post = PostRepository::create($input);
 
         return Redirect::route('blog.posts.show', ['posts' => $post->id])
-            ->with('success', 'Your post has been created successfully.');
+            ->with('success', '新闻发布成功。');
     }
 
     /**
@@ -142,7 +142,7 @@ class PostController extends AbstractController
         $post->update($input);
 
         return Redirect::route('blog.posts.show', ['posts' => $post->id])
-            ->with('success', 'Your post has been updated successfully.');
+            ->with('success', '新闻已经更新。');
     }
 
     /**
@@ -160,7 +160,7 @@ class PostController extends AbstractController
         $post->delete();
 
         return Redirect::route('blog.posts.index')
-            ->with('success', 'Your post has been deleted successfully.');
+            ->with('success', '新闻删除成功。');
     }
 
     /**
