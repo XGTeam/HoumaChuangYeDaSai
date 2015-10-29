@@ -54,7 +54,10 @@ elixir(function (mix) {
   mix.scripts(['cms-picker.js'], scriptsPath + 'cms-picker.js');
   mix.scripts(['AnimatedHeader/js/cbpAnimatedHeader.min.js'], scriptsPath + 'cbpAnimatedHeader.min.js', bowerPath);
   mix.scripts(['iCheck/icheck.min.js'], scriptsPath + 'icheck.min.js', bowerPath);
-  mix.scripts(['bootstrap-markdown/js/bootstrap-markdown.js', 'bootstrap-markdown/locale/bootstrap-markdown.zh.js'],
-      scriptsPath + 'bootstrap-markdown.js', bowerPath);
+  mix.scripts([
+      'markdown/lib/markdown.js',
+      'bootstrap-markdown/js/bootstrap-markdown.js',
+      'bootstrap-markdown/locale/bootstrap-markdown.zh.js'
+  ], scriptsPath + 'bootstrap-markdown.js', bowerPath);
   mix.scripts(['cms-comment-core.js', 'cms-comment-edit.js', 'cms-comment-delete.js', 'cms-comment-create.js', 'cms-comment-fetch.js', 'cms-comment-main.js'], scriptsPath + 'cms-comment.js');
 });

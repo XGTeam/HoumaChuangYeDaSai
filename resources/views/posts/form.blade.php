@@ -27,6 +27,8 @@
                       class="form-control"
                       data-provide="markdown"
                       data-language="zh"
+                      data-resize="vertical"
+                      data-iconlibrary="fa"
                       placeholder="正文..."
                       rows="10">{!! Request::old('body', $form['defaults']['body']) !!}</textarea>
             {!! ($errors->has('body') ? $errors->first('body') : '') !!}
