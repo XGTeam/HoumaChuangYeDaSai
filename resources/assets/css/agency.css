@@ -402,6 +402,15 @@ section h3.section-subheading {
     max-width: 400px;
 }
 
+#portfolio .portfolio-item a {
+  color: #444;
+}
+
+#portfolio .portfolio-item a:hover,
+#portfolio .portfolio-item a:active {
+  text-decoration: none;
+}
+
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
     position: absolute;
     width: 100%;

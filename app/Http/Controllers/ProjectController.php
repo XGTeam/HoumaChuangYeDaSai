@@ -70,6 +70,13 @@ class ProjectController extends AbstractController
     return response()->json(['avatar' => $avatarPreview, 'attachments' => $attachmentsPreview]);
   }
 
+  public function index()
+  {
+    $projects = Project::paginate(12);
+
+    return view('projects.index', compact('projects'));
+  }
+
   public function show($id)
   {
     $project = Project::with('attachments', 'members', 'user')->find($id);
