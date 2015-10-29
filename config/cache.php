@@ -83,6 +83,6 @@ return [
     |
     */
 
-    'prefix' => 'laravel',
+    'prefix' => 'hou_ma_da_sai',
 
 ];

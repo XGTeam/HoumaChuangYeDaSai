@@ -1,4 +1,5 @@
 .env
+.env.*
 phpunit.xml
 vendor
 node_modules
