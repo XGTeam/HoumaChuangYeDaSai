@@ -41,6 +41,7 @@ elixir(function (mix) {
       'jqBootstrapValidation/dist/jqBootstrapValidation-1.3.7.min.js',
       'classie/classie.js',
       'jquery.easing/js/jquery.easing.min.js',
+      'matchHeight/jquery.matchHeight-min.js'
   ], scriptsPath + 'vendor.min.js', bowerPath);
 
   mix.scripts(['cms-timeago.js',

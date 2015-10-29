@@ -104,6 +104,10 @@ $(function() {
     });
   }
 
+  function startMatchHeight () {
+    $('#portfolio .portfolio-item .portfolio-caption, .members .member .box').matchHeight();
+  }
+
   function init() {
     window.initJqBoostrapValidation();
 
@@ -114,6 +118,8 @@ $(function() {
     initMultipleAvatars();
     listenFileUploadedEvent();
     listenFileDeletedEvent();
+
+    startMatchHeight();
   }
 
   init();

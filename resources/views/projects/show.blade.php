@@ -78,7 +78,7 @@
           <div class="row">
             <div class="col-xs-12">
               <p class="lead">核心团队</p>
-              <div class="row">
+              <div class="row members">
                 @foreach($project->members as $member)
                   <div class="col-md-4 col-sm-6 col-xs-12 member">
                     <div class="box box-muted">
@@ -91,6 +91,7 @@
                         {{ $member->age }}&nbsp;,&nbsp;&nbsp;{{ $member->sex == 0 ? '男' : '女' }}
                         <br>
                         {{ $member->academy }}&nbsp;,&nbsp;&nbsp;{{ $member->diploma }}
+                        <br>
                         <br>
                         {{ $member->description }}
                         </address>
