@@ -4,6 +4,7 @@ require 'capistrano/setup'
 # Include default deployment tasks
 require 'capistrano/deploy'
 require 'capistrano/composer'
+require 'capistrano/npm'
 require 'capistrano/bower'
 require 'capistrano/laravel'
 
