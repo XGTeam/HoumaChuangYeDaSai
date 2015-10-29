@@ -14,6 +14,8 @@ set :file_permissions_paths, [
 ]
 set :file_permissions_users, ['www']
 
+set :linked_dirs, %w{public/system}
+
 namespace :deploy do
 
   after :restart, :clear_cache do
