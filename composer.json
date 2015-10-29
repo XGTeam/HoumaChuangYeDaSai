@@ -34,7 +34,8 @@
         "graham-campbell/navigation": "~2.0",
         "graham-campbell/throttle": "~4.0",
         "mccool/laravel-auto-presenter": "~3.0",
-        "codesleeve/laravel-stapler": "dev-master"
+        "codesleeve/laravel-stapler": "dev-master",
+        "predis/predis": "^1.0"
     },
     "require-dev": {
         "doctrine/dbal": "~2.5",
